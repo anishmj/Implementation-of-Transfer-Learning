@@ -141,7 +141,7 @@ print(classification_report(y_test,x_test_predictions))
 
 ![p](https://user-images.githubusercontent.com/93427246/241361727-16307c30-83c9-4306-bbc9-e29a54240ed9.png)
 ### Confusion Matrix
-Include confusion matrix here
+
 ![p](https://user-images.githubusercontent.com/93427246/241361712-3dde1f3e-4910-4f62-a2e5-8bef9f8bd581.png)
 ## RESULT
 Thus the implementation of Transfer learning of VGG19 for CIFAR10 dataset is successful.
