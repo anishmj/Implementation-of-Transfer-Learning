@@ -47,7 +47,7 @@ Add our own Fully connected layer to VGG19 base model, compile and fit it
 
 ## PROGRAM
 
-```
+~~~
 from keras.datasets import cifar10
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -128,7 +128,7 @@ print(confusion_matrix(y_test,x_test_predictions))
 
 print(classification_report(y_test,x_test_predictions))
 
-```
+~~~
 
 
 ## OUTPUT
@@ -143,6 +143,18 @@ print(classification_report(y_test,x_test_predictions))
 ### Confusion Matrix
 
 ![p](https://user-images.githubusercontent.com/93427246/241361712-3dde1f3e-4910-4f62-a2e5-8bef9f8bd581.png)
+
+## Conculsion:
+We got an Accuracy of 60% with this model.There could be several reasons for not achieving higher accuracy. Here are a few possible explanations:
+
+Dataset compatibility:
+VGG19 was originally designed and trained on the ImageNet dataset, which consists of high-resolution images. In contrast, the CIFAR10 dataset contains low-resolution images (32x32 pixels). The difference in image sizes and content can affect the transferability of the learned features. Pretrained models like VGG19 might not be the most suitable choice for CIFAR10 due to this disparity in data characteristics.
+
+Inadequate training data:
+If the CIFAR10 dataset is relatively small, it may not provide enough diverse examples for the model to learn robust representations. Deep learning models, such as VGG19, typically require large amounts of data to generalize well. In such cases, you could consider exploring other architectures that are specifically designed for smaller datasets, or you might want to look into techniques like data augmentation or transfer learning from models pretrained on similar datasets.
+
+Model capacity:
+VGG19 is a deep and computationally expensive model with a large number of parameters. If you are limited by computational resources or working with a smaller dataset, the model's capacity might be excessive for the task at hand. In such cases, using a smaller model architecture or exploring other lightweight architectures like MobileNet or SqueezeNet could be more suitable and provide better accuracy.
 ## RESULT
 Thus the implementation of Transfer learning of VGG19 for CIFAR10 dataset is successful.
 
