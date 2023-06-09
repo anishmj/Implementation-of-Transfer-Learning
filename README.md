@@ -62,19 +62,9 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau
 
 (x_train,y_train),(x_test,y_test) = cifar10.load_data()
 
-train_generator = ImageDataGenerator(rotation_range = 2,
-                                     horizontal_flip = True,
-                                     rescale = 1.0/255.0,
-                                     zoom_range = .1)
 
-test_generator = ImageDataGenerator(rotation_range = 2,
-                                     horizontal_flip = True,
-                                     rescale = 1.0/255.0,
-                                     zoom_range = .1)
 
-y_train_onehot = utils.to_categorical(y_train,10)
 
-y_test_onehot = utils.to_categorical(y_test,10)
 
 base_model = VGG19(include_top = False,
                    weights = 'imagenet',
